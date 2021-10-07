@@ -1,13 +1,13 @@
 const theme = {
     colors: {
-      primary: '#62000ee',
-      background: '#0000014',
-      text: '000000B3',
+      primary: '#6200ee',
+      background: '#00000014',
+      text: '00000B3',
       sucess: '#135E01',
     },
     fonts: {
       regular: 'Roboto, sans-serif',
     },
 };
-
+ 
 export default theme;
