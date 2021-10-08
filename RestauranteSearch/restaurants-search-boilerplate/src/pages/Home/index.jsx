@@ -3,10 +3,10 @@ import TextField, { Input } from '@material/react-text-field';
 import MaterialIcon from '@material/react-material-icon';
 
 import logo from '../../assets/logo.svg';
-import Slider from 'react-slick';
 import restaurante from '../../assets/restaurante-fake.png'
+import { Card } from '../../components';
 
-import { Container, Search, Logo, Wrapper, Map, CarouselTitle } from './styles';
+import { Container, Search, Logo, Wrapper, Map, Carousel, CarouselTitle } from './styles';
 
 
 const Home = () => {
@@ -35,27 +35,14 @@ const Home = () => {
               onChange={(e) => setInputValue(e.target.value)} />
           </TextField>
           <CarouselTitle>Na sua Área</CarouselTitle>
-          <Slider {...settings}>
-            <div>
-              <img src={restaurante} alt="" />
-            </div>
-
-            <div>
-              <img src={restaurante} alt="" />
-            </div>
-
-            <div>
-              <img src={restaurante} alt="" />
-            </div>
-
-            <div>
-              <img src={restaurante} alt="" />
-            </div>
-
-            <div>
-              <img src={restaurante} alt="" />
-            </div>
-          </Slider>
+          <Carousel {...settings}>
+            <Card photo={restaurante} title='Nome A'/>
+            <Card photo={restaurante} title='Nome B'/>
+            <Card photo={restaurante} title='Nome C'/>
+            <Card photo={restaurante} title='Nome D'/>
+            <Card photo={restaurante} title='Nome E'/>
+            <Card photo={restaurante} title='Nome F'/>
+          </Carousel>
         </Search>
       </Container>
       <Map />

@@ -3,14 +3,26 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.CarouselTitle = exports.Map = exports.Logo = exports.Search = exports.Container = exports.Wrapper = void 0;
+exports.CarouselTitle = exports.Carousel = exports.Map = exports.Logo = exports.Search = exports.Container = exports.Wrapper = void 0;
+
+var _reactSlick = _interopRequireDefault(require("react-slick"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _templateObject6() {
+function _templateObject7() {
   var data = _taggedTemplateLiteral(["\n  font-family: ", ";\n  color: ", ";\n  font-size: 24px;\n  font-weight: bold;\n  line-height: 29px;\n  margin: 16px 0;\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  .slick-slide{\n    margin-right: 16px;\n  }\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -92,8 +104,10 @@ exports.Logo = Logo;
 var Map = _styledComponents["default"].div(_templateObject5());
 
 exports.Map = Map;
+var Carousel = (0, _styledComponents["default"])(_reactSlick["default"])(_templateObject6());
+exports.Carousel = Carousel;
 
-var CarouselTitle = _styledComponents["default"].h1(_templateObject6(), function (props) {
+var CarouselTitle = _styledComponents["default"].h1(_templateObject7(), function (props) {
   return props.theme.fonts.regular;
 }, function (props) {
   return props.theme.colors.text;
